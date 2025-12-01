@@ -1,5 +1,26 @@
-backend/venv/
-frontend/node_modules/
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+venv/
+env/
 .env
+
+# FastAPI
+backend/__pycache__/
+backend/*.pyc
+
+# Node / React
+frontend/node_modules/
+frontend/.env
+npm-debug.log
+yarn-error.log
+
+# Build files
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
