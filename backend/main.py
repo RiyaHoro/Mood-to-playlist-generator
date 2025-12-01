@@ -20,6 +20,14 @@ app.add_middleware(
 
 class MoodText(BaseModel):
     text: str
+import os
+
+@app.get("/check-env")
+def check_env():
+    return {
+        "client_id": os.getenv("SPOTIFY_CLIENT_ID"),
+        "client_secret": os.getenv("SPOTIFY_CLIENT_SECRET")
+    }
 
 @app.post("/predict")
 def predict_mood(data: MoodText):
