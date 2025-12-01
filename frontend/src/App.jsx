@@ -14,6 +14,7 @@ function App() {
       <MoodInput setResult={setResult} />
 
       {result && <Playlist result={result} />}
+      
     </div>
   );
 }

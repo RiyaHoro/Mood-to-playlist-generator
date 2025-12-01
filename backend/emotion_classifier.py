@@ -30,7 +30,13 @@ KEYWORD_MOOD = {
     "romantic": "romantic",
     "calm": "calm",
     "peaceful": "calm",
-    "energized": "energetic"
+    "energized": "energetic",
+    "motivated": "energetic",
+    "furious": "angry",
+    "joyful": "happy",
+    "content": "happy",
+    "heartbroken": "sad",
+    "affectionate": "romantic",
 }
 
 

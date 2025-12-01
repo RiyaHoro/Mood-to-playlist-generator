@@ -1,0 +1,86 @@
+.playlist-container {
+  margin-top: 30px;
+  padding: 20px;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.playlist-title {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mood {
+  color: #a78bfa;
+  font-weight: bold;
+}
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+.song-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.song-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.album-art {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.song-info {
+  text-align: center;
+}
+
+.song-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.song-artist {
+  margin-top: 5px;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.audio-player {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.spotify-btn {
+  display: block;
+  margin-top: 12px;
+  background: #1db954;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.spotify-btn:hover {
+  background: #18a046;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

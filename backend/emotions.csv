@@ -1,13 +1,31 @@
 mood,song,artist,link
-sad,Fix You,Coldplay,https://open.spotify.com/track/xyz1
-sad,Let Her Go,Passenger,https://open.spotify.com/track/xyz2
-happy,Happy,Pharrell Williams,https://open.spotify.com/track/abc1
-happy,On Top of the World,Imagine Dragons,https://open.spotify.com/track/abc2
-calm,Night Owl,Gerry Mulligan,https://open.spotify.com/track/lmn1
-calm,Weightless,Marconi Union,https://open.spotify.com/track/lmn2
-energetic,Thunder,Imagine Dragons,https://open.spotify.com/track/ener1
-energetic,Don’t Stop Me Now,Queen,https://open.spotify.com/track/ener2
-romantic,Perfect,Ed Sheeran,https://open.spotify.com/track/rom1
-romantic,All of Me,John Legend,https://open.spotify.com/track/rom2
-neutral,Sunflower,Post Malone,https://open.spotify.com/track/neutral1
-neutral,Memories,Maroon 5,https://open.spotify.com/track/neutral2
+sad,Fix You,Coldplay,https://open.spotify.com/track/7LVHVU3tWfcxj5aiPFEW4Q
+sad,Let Her Go,Passenger,https://open.spotify.com/track/2JzZzZUQj3Qff7wapcbKgc
+sad,All I Want,Kodaline,https://open.spotify.com/track/3sW3oSbzsfecv9XoUdYsWf
+sad,Someone Like You,Adele,https://open.spotify.com/track/4rLXrVH0hOe8OZKfQZuofl
+sad,Jeene Laga Hoon,Atif Aslam,https://open.spotify.com/track/0ofbQMrRDsUaVKq2mGLEAb
+
+happy,Happy,Pharrell Williams,https://open.spotify.com/track/60nZcImufyMA1MKQY3dcCH
+happy,On Top of the World,Imagine Dragons,https://open.spotify.com/track/44bct0tNeP1sQhmC5RMdyu
+happy,I Like Me Better,Lauv,https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI
+happy,Tum Se Hi,Atif Aslam,https://open.spotify.com/track/00RgcIDX8P05CGgk6EYg1R
+
+calm,Weightless,Marconi Union,https://open.spotify.com/track/3JOVTQ5h8HGFnDdp4VTN7S
+calm,Night Owl,Gerry Mulligan,https://open.spotify.com/track/22bKhfMvm67unFk5Pxau5h
+calm,Bloom,The Paper Kites,https://open.spotify.com/track/2YlZnw2ikdb837oKMKjBkW
+calm,Ae Dil Hai Mushkil (Acoustic),Arijit Singh,https://open.spotify.com/track/5c1s4xMfPIRCsBlKs7hjBD
+
+energetic,Thunder,Imagine Dragons,https://open.spotify.com/track/1IHWl5LamUGEuP4ozKQSXZ
+energetic,Don't Stop Me Now,Queen,https://open.spotify.com/track/3bCqU9G5Ko9EPICa5Z5g0m
+energetic,Believer,Imagine Dragons,https://open.spotify.com/track/0pqnGHJpmpxLKifKRmU6WP
+energetic,Kar Har Maidaan Fateh,Sukhwinder Singh,https://open.spotify.com/track/3BgSZGREtzi2g9C2aYzppn
+
+romantic,Perfect,Ed Sheeran,https://open.spotify.com/track/0tgVpDi06FyKpA1z0VMD4v
+romantic,All of Me,John Legend,https://open.spotify.com/track/0QjjaCaXE45mvhCnV3C0TA
+romantic,Tum Hi Ho,Arijit Singh,https://open.spotify.com/track/2qG5sZ7Si6sdK74qLxedYM
+romantic,Raabta,Arijit Singh,https://open.spotify.com/track/0d85pFk9s2W2LtlrOic72k
+
+neutral,Memories,Maroon 5,https://open.spotify.com/track/4cktbXiXOapiLBMprHFErI
+neutral,Sunflower,Post Malone,https://open.spotify.com/track/3KkXRkHbMCARz0aVfEt68P
+neutral,Cold/Mess,Prateek Kuhad,https://open.spotify.com/track/5vVYFXYgAFx9ZoQY2fvp5i
+neutral,Kabira (Encore),Arijit Singh,https://open.spotify.com/track/7yu66I3F3ZWITMlFTEFb3a
