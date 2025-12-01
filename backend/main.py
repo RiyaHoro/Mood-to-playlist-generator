@@ -34,20 +34,18 @@ def predict_mood(data: MoodText):
     try:
         mood = get_mood(data.text)
 
-        from spotify_api import get_spotify_client
-        from mood_to_genre import MOOD_GENRE_MAP
-
         sp = get_spotify_client()
         genres = MOOD_GENRE_MAP.get(mood, ["pop"])
 
-        results = sp.recommendations(seed_genres=genres, limit=10)
+        # Use Spotify SEARCH API (always works)
+        query = f"genre:{genres[0]}"
+        results = sp.search(q=query, type="track", limit=10)
 
-        # If Spotify returns no tracks
-        if not results or "tracks" not in results:
-            return {"error": "Spotify returned no tracks", "raw": results}
+        if "tracks" not in results or not results["tracks"]["items"]:
+            return {"error": "No tracks returned", "raw": results}
 
         playlist = []
-        for track in results["tracks"]:
+        for track in results["tracks"]["items"]:
             playlist.append({
                 "song": track["name"],
                 "artist": track["artists"][0]["name"],
@@ -60,5 +58,3 @@ def predict_mood(data: MoodText):
 
     except Exception as e:
         return {"error": str(e)}
-
-    
