@@ -23,25 +23,34 @@ class MoodText(BaseModel):
 
 @app.post("/predict")
 def predict_mood(data: MoodText):
-    mood = get_mood(data.text)
+    try:
+        mood = get_mood(data.text)
 
-    sp = get_spotify_client()
-    genres = MOOD_GENRE_MAP.get(mood, ["pop"])
+        from spotify_api import get_spotify_client
+        from mood_to_genre import MOOD_GENRE_MAP
 
-    # Get 10 recommended tracks
-    results = sp.recommendations(seed_genres=genres, limit=10)
+        sp = get_spotify_client()
+        genres = MOOD_GENRE_MAP.get(mood, ["pop"])
 
-    playlist = []
-    for track in results["tracks"]:
-      playlist.append({
-        "song": track["name"],
-        "artist": track["artists"][0]["name"],
-        "link": track["external_urls"]["spotify"],
-        "preview": track["preview_url"],
-        "image": track["album"]["images"][0]["url"] if track["album"]["images"] else None
-    })
+        results = sp.recommendations(seed_genres=genres, limit=10)
 
-    return {
-        "mood": mood,
-        "playlist": playlist
-    }
+        # If Spotify returns no tracks
+        if not results or "tracks" not in results:
+            return {"error": "Spotify returned no tracks", "raw": results}
+
+        playlist = []
+        for track in results["tracks"]:
+            playlist.append({
+                "song": track["name"],
+                "artist": track["artists"][0]["name"],
+                "link": track["external_urls"]["spotify"],
+                "preview": track["preview_url"],
+                "image": track["album"]["images"][0]["url"] if track["album"]["images"] else None
+            })
+
+        return {"mood": mood, "playlist": playlist}
+
+    except Exception as e:
+        return {"error": str(e)}
+
+    
