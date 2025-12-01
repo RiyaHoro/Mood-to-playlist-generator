@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 from emotion_classifier import get_mood
 from spotify_api import get_spotify_client
@@ -8,13 +8,15 @@ from mood_to_genre import MOOD_GENRE_MAP
 
 app = FastAPI()
 
+# CORS FIX
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],       # IMPORTANT
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 class MoodText(BaseModel):
     text: str
