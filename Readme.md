@@ -69,7 +69,7 @@ Coming soon…
 ---
 
 ## 📁 Folder Structure
-
+```
 Mood-to-Playlist-Generator/
 │
 ├── backend/
@@ -85,7 +85,7 @@ Mood-to-Playlist-Generator/
 │ ├── Playlist.jsx
 │ ├── api.js
 │ └── index.css
-
+```
 
 ---
 
@@ -179,11 +179,12 @@ Response
 
 ### 🎨 Screenshots
 Render deployment screenshot
-![image](/frontend/src/assets/image.png)
+![image](/frontend/src/assets/img.png)
 
 ![Alt text](/frontend/src/assets/image1.png)
 📌 App Screenshot
-![img]()
+![img](/frontend/src/assets/im.png)
+
 ## 💡 Future Enhancements
 ```
 Spotify API integration
