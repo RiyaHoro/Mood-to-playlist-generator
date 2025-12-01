@@ -1,6 +1,6 @@
 annotated-doc==0.0.4
 annotated-types==0.7.0
-spotipy==2.27.0
+spotipy
 anyio==4.12.0
 click==8.3.1
 colorama==0.4.6
