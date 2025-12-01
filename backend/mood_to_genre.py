@@ -1,8 +1,8 @@
 MOOD_GENRE_MAP = {
-    "happy": ["happy", "pop", "dance", "party"],
-    "sad": ["sad", "acoustic", "piano", "singer-songwriter"],
-    "energetic": ["workout", "edm", "rock"],
-    "calm": ["chill", "ambient", "instrumental"],
-    "romantic": ["romance", "love"],
-    "neutral": ["pop", "indie", "soft-rock"]
+    "happy": ["pop", "dance", "party"],
+    "sad": ["acoustic", "piano", "singer-songwriter"],
+    "energetic": ["edm", "rock", "work-out"],
+    "calm": ["ambient", "sleep", "study"],
+    "romantic": ["soul", "r-n-b", "afrobeat"],
+    "neutral": ["indie", "alternative", "pop"]
 }
