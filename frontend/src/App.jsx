@@ -8,7 +8,10 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="title">🎧 Emotion-based Music Recommendation</h1>
+      <h1 style={{ whiteSpace: "nowrap", fontSize: "28px", fontWeight: "bold" }}>
+  🎧 Emotion-based Music Recommendation
+</h1>
+
       <p className="subtitle">Type your mood or send emojis — we’ll match the vibe.</p>
 
       <MoodInput setResult={setResult} />
