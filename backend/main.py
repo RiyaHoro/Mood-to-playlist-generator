@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
+import os
 from emotion_classifier import get_mood
 from spotify_api import get_spotify_client
 from mood_to_genre import MOOD_GENRE_MAP
@@ -22,7 +22,7 @@ app.add_middleware(
 
 class MoodText(BaseModel):
     text: str
-import os
+
 
 @app.get("/check-env")
 def check_env():

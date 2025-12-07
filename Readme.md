@@ -6,45 +6,87 @@ It uses **FastAPI (Python)** for the backend mood detection and **React** for th
 ---
 
 ## 🌟 Demo
-Coming soon…
+Live Demo:
+🔗 Frontend: https://mood-to-playlist-generator.vercel.app
 
+🔗 Backend: https://mood-to-playlist-generator.onrender.com
 ---
 
 ## 🚀 Features
 
-- 🎭 **Emotion Detection**
-  - Detects emotions using text analysis
-  - Emoji-based mood detection (😔😊😍😴🤬 etc.)
+- 🎭 Emotion Detection
 
-- 🎵 **AI Playlist Recommendation**
-  - Maps mood → curated list of songs
-  - Spotify/Youtube links
+  Detects mood using text-based keyword matching
 
-- ⚡ **FastAPI Backend**
-  - Clean `/predict` endpoint
-  - CSV-based music data
+  Emoji-based mood detection (😔 😊 😍 😴 🤬 etc.)
 
-- 💜 **React Frontend**
-  - Aesthetic UI
-  - Responsive layout
+- 🎵 Playlist Recommendation
 
-- 🌍 **Cross-Origin Support**
-  - Fully enabled CORS for frontend-backend communication
+  Maps mood → genre (happy → pop, sad → soft, angry → rock, etc.)
+
+  Fetches real music tracks using the Spotify Search API
+
+  Includes song name, artist, album image, preview URL
+
+- ⚡ FastAPI Backend
+
+  Clean /predict endpoint
+
+  Emoji + keyword mood recognition
+
+  Spotify Search API integration
+
+  CORS enabled for frontend communication
+
+- 💜 React Frontend
+
+  Modern, clean UI
+
+  Mood input box
+
+  Playlist display with clickable Spotify links
+
+- 🌍 Cross-Origin Support
+
+    Fully enabled CORS for frontend → backend requests
 
 ---
 
 ## 🧠 How It Works
+1. User Input
 
-1. User enters → *mood text* or *emojis*  
-   Example: `"Feeling low 😔"`
+The user enters text or emojis:
 
-2. FastAPI backend:
-   - Detects mood using emoji/keyword rules  
-   - Fetches matching playlist from CSV
+  “I feel low 😔”
+  “So happy today! 😊”
 
-3. Frontend:
-   - Displays mood + recommended songs
-   - Buttons to open Spotify/Youtube
+2. FastAPI Backend
+
+  Reads emojis → maps to mood
+
+  Reads keywords → maps to mood
+
+  Mood → mapped to genre using MOOD_GENRE_MAP
+
+Spotify API is used: sp.search(q="genre:pop", type="track", limit=10)
+
+3. React Frontend
+
+Displays the detected mood
+
+Shows recommended playlist from Spotify
+
+Each song includes:
+-
+Title
+
+Artist
+
+Spotify link
+
+Preview URL
+
+Album cover
 
 ---
 
@@ -73,18 +115,20 @@ Coming soon…
 Mood-to-Playlist-Generator/
 │
 ├── backend/
-│ ├── main.py
-│ ├── emotion_classifier.py
-│ ├── emotions.csv
-│ ├── requirements.txt
+│   ├── main.py
+│   ├── emotion_classifier.py
+│   ├── spotify_api.py
+│   ├── mood_to_genre.py
+│   ├── requirements.txt
 │
 └── frontend/
-├── src/
-│ ├── App.jsx
-│ ├── MoodInput.jsx
-│ ├── Playlist.jsx
-│ ├── api.js
-│ └── index.css
+    ├── src/
+    │   ├── App.jsx
+    │   ├── MoodInput.jsx
+    │   ├── Playlist.jsx
+    │   ├── api.js
+    │   └── index.css
+
 ```
 
 ---
@@ -187,15 +231,15 @@ Render deployment screenshot
 
 ## 💡 Future Enhancements
 ```
-Spotify API integration
+Full Spotify OAuth integration
 
-User mood history
+Save mood history
 
 Weekly mood dashboard
 
-Advanced ML model (SVM/LogReg)
+Machine learning–based emotion detection
 
-Animated UI
+Animated UI improvements
 ```
 
 ## ❤️ Contributing
