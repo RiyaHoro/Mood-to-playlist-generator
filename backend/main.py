@@ -11,7 +11,9 @@ app = FastAPI()
 # CORS FIX
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],       # IMPORTANT
+    allow_origins=["https://mood-to-playlist-generator.vercel.app/",
+        "http://localhost:5174/"
+    ],       # IMPORTANT
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
