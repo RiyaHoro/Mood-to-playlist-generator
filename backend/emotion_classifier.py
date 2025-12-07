@@ -16,6 +16,7 @@ EMOJI_MOOD = {
     "😌": "calm",
     "🤩": "energetic",
     "💪": "energetic"
+    
 }
 
 # Keyword → mood mapping
@@ -37,6 +38,11 @@ KEYWORD_MOOD = {
     "content": "happy",
     "heartbroken": "sad",
     "affectionate": "romantic",
+     # ⭐ NEW FIXES ⭐
+    "bad mood": "sad",
+    "bad": "sad",
+    "upset": "sad",
+    "low": "sad"
 }
 
 
